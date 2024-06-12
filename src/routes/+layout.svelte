@@ -1,53 +1,31 @@
-<script>
-	import Header from './Header.svelte';
-	import './styles.css';
+<script lang="ts">
+    import "../app.css";
+    import {setContext} from "svelte";
+
+    let {data, children} = $props();
+
+
+
+
+    const parseCSSVariables = () => {
+        let css = '';
+        if(data.design !== undefined) {
+            data.design.forEach(design => {
+                if(design.key.startsWith('--'))
+                    css += `${design.key}: ${design.value};`;
+            });
+        }
+        return css;
+    }
+
+
+
+    const iconCtx = {
+        variation: 'filled'
+    };
+    setContext('iconCtx', iconCtx);
+
 </script>
-
-<div class="app">
-	<Header />
-
-	<main>
-		<slot />
-	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
+<div style="{parseCSSVariables()}" id="layoutWrapper" class="bg-bodybg w-full h-full pt-2">
+    {@render children()}
 </div>
-
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
-</style>

@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body {
+    @apply w-full h-full m-0 p-0;
+}
+
+.mdc-notched-outline--notched .mdc-notched-outline__notch {
+    @apply !border-t-0 !border-l-0 !border-r-0;
+}
+
+
+
+
+svg:focus {
+    outline: none;
+}
+
+
+.bg-secondary a {
+    color: var(--color-secondarybg-link);
+}
+
+.bg-primary {
+    &.mdc-button--raised {
+        background-color: var(--color-primary);
+        color: var(--color-primarybg-text);
+
+        &:disabled {
+            @apply bg-gray-200 text-gray-500 cursor-not-allowed;
+        }
+    }
+}
+
+
+ .cardColumns {
+     @apply columns-1 2xl:columns-2 gap-4;
+    .card {
+        @apply mb-4;
+    }
+ }
+

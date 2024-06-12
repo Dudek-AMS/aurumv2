@@ -1,0 +1,411 @@
+{
+  "EntityDescriptor": {
+    "Signature": {
+      "SignedInfo": {
+        "CanonicalizationMethod": {
+          "Algorithm": "http://www.w3.org/2001/10/xml-exc-c14n#"
+        },
+        "SignatureMethod": {
+          "Algorithm": "http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
+        },
+        "Reference": {
+          "Transforms": {
+            "Transform": [
+              {
+                "Algorithm": "http://www.w3.org/2000/09/xmldsig#enveloped-signature"
+              },
+              {
+                "Algorithm": "http://www.w3.org/2001/10/xml-exc-c14n#"
+              }
+            ]
+          },
+          "DigestMethod": {
+            "Algorithm": "http://www.w3.org/2001/04/xmlenc#sha256"
+          },
+          "DigestValue": "KaXNtT90f99QFbxxEaSEX8Ov/TM4qW/xPcXHPAvbJ6s=",
+          "URI": "#_a2c45126-ccd6-48b3-935c-71f0fb74b70f"
+        }
+      },
+      "SignatureValue": "Gb7DpfUaP3M2xPPmeuuJ83rMH5CDxO5xyteqLvgWpSLtA/1Rl0ZOV9vWty0x1tIhzhGyXIp4owtu/YhHT9jKIQnq3dAD8h/FcAVc3CWhVW1ZSNmqqupKixYk0L0vnGrLlhs5JB+sVj1QYN+3USCi+/mkmLpd//uX5FZIMw4TMitTBLs9Pq02SkZpo8+T63+Jf9BeDGbmvbFHqrRDtBVDBY54a6z/css6+L4Ns7oS/XQi6uvf3NOw34UIkQIIKHeek0ZHvcrvXgICZSCI6RSWVOc4i7JKW2tqhx3PP1hBOxsJWDd5KRBmzmDVWQ44iE1xeXy56YiddIpXNLDqFlyE6g==",
+      "KeyInfo": {
+        "X509Data": {
+          "X509Certificate": {
+            "prefix": "ds",
+            "text": "MIIC8DCCAdigAwIBAgIQLSFOP5vm+ZpGHIScRa9MhjANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA2MDMwNzU5NTlaFw0yNzA2MDMwNzU5NTlaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqFnlrOlSmN082GfiPVKVhTqs9/6ff92l/Wlw+eJPXunTx8dCPKTjWQjDqaC7XEm7SeUX0sKu4a7ZAu7xdtlgwaGFeI/kowIcrl1J1O43PieIfCH6HUeT4njC0sTxzLlWfEvXkRvlNVC+OLAmTuTN7FXCk5HDccceAulnkxYHvGu9a3h3N9fuVlKCjgocC1//LtjukEKaE48WxnhXp1FJDaTtF/9HfPnGUzrR5BNBhaaMzy2WX2dJXuZkaPQs7LfzAti9Dy8z/IR4SGJSI5cgcKXSQuIbZmNQMoEwYpz8R76Ivs6TC6AtNlfv1jWZTYDz8bb+bKuFNRg9xNpdq2gutQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAcdTkDEufbBFRCfxJDshFmZoz0h1FLwd3TcZ/FFp7eR6reAn3oULIuojBpO0XlKcrF9bluR1Hp4RjB+a65P9utLY88sAIG1kCncuxR753T8p7U7XhDgQ85qspkjmZzv1nb21XdbpLF4t7AZ3WbNJTivD2OzV/qQlsNm4Bj8OVs5IHiZ73iM4YTriDSv7vwd9LHhn/0/NYYRX+vFQhg0BUhf2egYrMiDnSeniuwwbeTI0DI+0vxTFY+XlvpgEjIal79pex0Mfzx7lOXUjjH+5ixeK7AUDSo+7IJ7m0dQjueJ6C4K1LTywvHUGHCIhbUes/+nPjRVxt4mNVRFqHrOQGV"
+          },
+          "xmlns:ds": "http://www.w3.org/2000/09/xmldsig#",
+          "prefix": "ds"
+        }
+      },
+      "xmlns": "http://www.w3.org/2000/09/xmldsig#"
+    },
+    "RoleDescriptor": [
+      {
+        "KeyDescriptor": {
+          "KeyInfo": {
+            "X509Data": {
+              "X509Certificate": "MIIC8DCCAdigAwIBAgIQLSFOP5vm+ZpGHIScRa9MhjANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA2MDMwNzU5NTlaFw0yNzA2MDMwNzU5NTlaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqFnlrOlSmN082GfiPVKVhTqs9/6ff92l/Wlw+eJPXunTx8dCPKTjWQjDqaC7XEm7SeUX0sKu4a7ZAu7xdtlgwaGFeI/kowIcrl1J1O43PieIfCH6HUeT4njC0sTxzLlWfEvXkRvlNVC+OLAmTuTN7FXCk5HDccceAulnkxYHvGu9a3h3N9fuVlKCjgocC1//LtjukEKaE48WxnhXp1FJDaTtF/9HfPnGUzrR5BNBhaaMzy2WX2dJXuZkaPQs7LfzAti9Dy8z/IR4SGJSI5cgcKXSQuIbZmNQMoEwYpz8R76Ivs6TC6AtNlfv1jWZTYDz8bb+bKuFNRg9xNpdq2gutQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAcdTkDEufbBFRCfxJDshFmZoz0h1FLwd3TcZ/FFp7eR6reAn3oULIuojBpO0XlKcrF9bluR1Hp4RjB+a65P9utLY88sAIG1kCncuxR753T8p7U7XhDgQ85qspkjmZzv1nb21XdbpLF4t7AZ3WbNJTivD2OzV/qQlsNm4Bj8OVs5IHiZ73iM4YTriDSv7vwd9LHhn/0/NYYRX+vFQhg0BUhf2egYrMiDnSeniuwwbeTI0DI+0vxTFY+XlvpgEjIal79pex0Mfzx7lOXUjjH+5ixeK7AUDSo+7IJ7m0dQjueJ6C4K1LTywvHUGHCIhbUes/+nPjRVxt4mNVRFqHrOQGV"
+            },
+            "xmlns": "http://www.w3.org/2000/09/xmldsig#"
+          },
+          "use": "signing"
+        },
+        "ClaimTypesOffered": {
+          "ClaimType": [
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "Name"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "The mutable display name of the user."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "Subject"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "An immutable, globally unique, non-reusable identifier of the user that is unique to the application for which a token is issued."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "Given Name"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "First name of the user."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "Surname"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "Last name of the user."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "Display Name"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "Display name of the user."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/identity/claims/displayname",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "Nick Name"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "Nick name of the user."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/identity/claims/nickname",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "Authentication Instant"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "The time (UTC) when the user is authenticated to Windows Azure Active Directory."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationinstant",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "Authentication Method"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "The method that Windows Azure Active Directory uses to authenticate users."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "ObjectIdentifier"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "Primary identifier for the user in the directory. Immutable, globally unique, non-reusable."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/identity/claims/objectidentifier",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "TenantId"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "Identifier for the user's tenant."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/identity/claims/tenantid",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "IdentityProvider"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "Identity provider for the user."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/identity/claims/identityprovider",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "Email"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "Email address of the user."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "Groups"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "Groups of the user."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/ws/2008/06/identity/claims/groups",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "External Access Token"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "Access token issued by external identity provider."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/identity/claims/accesstoken",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "External Access Token Expiration"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "UTC expiration time of access token issued by external identity provider."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/ws/2008/06/identity/claims/expiration",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "External OpenID 2.0 Identifier"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "OpenID 2.0 identifier issued by external identity provider."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/identity/claims/openid2_id",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "GroupsOverageClaim"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "Issued when number of user's group claims exceeds return limit."
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/claims/groups.link",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "Role Claim"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "Roles that the user or Service Principal is attached to"
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+              "prefix": "auth"
+            },
+            {
+              "DisplayName": {
+                "prefix": "auth",
+                "text": "RoleTemplate Id Claim"
+              },
+              "Description": {
+                "prefix": "auth",
+                "text": "Role template id of the Built-in Directory Roles that the user is a member of"
+              },
+              "xmlns:auth": "http://docs.oasis-open.org/wsfed/authorization/200706",
+              "Uri": "http://schemas.microsoft.com/ws/2008/06/identity/claims/wids",
+              "prefix": "auth"
+            }
+          ],
+          "prefix": "fed"
+        },
+        "SecurityTokenServiceEndpoint": {
+          "EndpointReference": {
+            "Address": {
+              "prefix": "wsa",
+              "text": "https://login.microsoftonline.com/3d355765-67d9-47cd-9c7a-bf31179f56eb/wsfed"
+            },
+            "xmlns:wsa": "http://www.w3.org/2005/08/addressing",
+            "prefix": "wsa"
+          },
+          "prefix": "fed"
+        },
+        "PassiveRequestorEndpoint": {
+          "EndpointReference": {
+            "Address": {
+              "prefix": "wsa",
+              "text": "https://login.microsoftonline.com/3d355765-67d9-47cd-9c7a-bf31179f56eb/wsfed"
+            },
+            "xmlns:wsa": "http://www.w3.org/2005/08/addressing",
+            "prefix": "wsa"
+          },
+          "prefix": "fed"
+        },
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xmlns:fed": "http://docs.oasis-open.org/wsfed/federation/200706",
+        "xsi:type": "fed:SecurityTokenServiceType",
+        "protocolSupportEnumeration": "http://docs.oasis-open.org/wsfed/federation/200706"
+      },
+      {
+        "KeyDescriptor": {
+          "KeyInfo": {
+            "X509Data": {
+              "X509Certificate": "MIIC8DCCAdigAwIBAgIQLSFOP5vm+ZpGHIScRa9MhjANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA2MDMwNzU5NTlaFw0yNzA2MDMwNzU5NTlaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqFnlrOlSmN082GfiPVKVhTqs9/6ff92l/Wlw+eJPXunTx8dCPKTjWQjDqaC7XEm7SeUX0sKu4a7ZAu7xdtlgwaGFeI/kowIcrl1J1O43PieIfCH6HUeT4njC0sTxzLlWfEvXkRvlNVC+OLAmTuTN7FXCk5HDccceAulnkxYHvGu9a3h3N9fuVlKCjgocC1//LtjukEKaE48WxnhXp1FJDaTtF/9HfPnGUzrR5BNBhaaMzy2WX2dJXuZkaPQs7LfzAti9Dy8z/IR4SGJSI5cgcKXSQuIbZmNQMoEwYpz8R76Ivs6TC6AtNlfv1jWZTYDz8bb+bKuFNRg9xNpdq2gutQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAcdTkDEufbBFRCfxJDshFmZoz0h1FLwd3TcZ/FFp7eR6reAn3oULIuojBpO0XlKcrF9bluR1Hp4RjB+a65P9utLY88sAIG1kCncuxR753T8p7U7XhDgQ85qspkjmZzv1nb21XdbpLF4t7AZ3WbNJTivD2OzV/qQlsNm4Bj8OVs5IHiZ73iM4YTriDSv7vwd9LHhn/0/NYYRX+vFQhg0BUhf2egYrMiDnSeniuwwbeTI0DI+0vxTFY+XlvpgEjIal79pex0Mfzx7lOXUjjH+5ixeK7AUDSo+7IJ7m0dQjueJ6C4K1LTywvHUGHCIhbUes/+nPjRVxt4mNVRFqHrOQGV"
+            },
+            "xmlns": "http://www.w3.org/2000/09/xmldsig#"
+          },
+          "use": "signing"
+        },
+        "TargetScopes": {
+          "EndpointReference": {
+            "Address": {
+              "prefix": "wsa",
+              "text": "https://sts.windows.net/3d355765-67d9-47cd-9c7a-bf31179f56eb/"
+            },
+            "xmlns:wsa": "http://www.w3.org/2005/08/addressing",
+            "prefix": "wsa"
+          },
+          "prefix": "fed"
+        },
+        "ApplicationServiceEndpoint": {
+          "EndpointReference": {
+            "Address": {
+              "prefix": "wsa",
+              "text": "https://login.microsoftonline.com/3d355765-67d9-47cd-9c7a-bf31179f56eb/wsfed"
+            },
+            "xmlns:wsa": "http://www.w3.org/2005/08/addressing",
+            "prefix": "wsa"
+          },
+          "prefix": "fed"
+        },
+        "PassiveRequestorEndpoint": {
+          "EndpointReference": {
+            "Address": {
+              "prefix": "wsa",
+              "text": "https://login.microsoftonline.com/3d355765-67d9-47cd-9c7a-bf31179f56eb/wsfed"
+            },
+            "xmlns:wsa": "http://www.w3.org/2005/08/addressing",
+            "prefix": "wsa"
+          },
+          "prefix": "fed"
+        },
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xmlns:fed": "http://docs.oasis-open.org/wsfed/federation/200706",
+        "xsi:type": "fed:ApplicationServiceType",
+        "protocolSupportEnumeration": "http://docs.oasis-open.org/wsfed/federation/200706"
+      }
+    ],
+    "IDPSSODescriptor": {
+      "KeyDescriptor": {
+        "KeyInfo": {
+          "X509Data": {
+            "X509Certificate": "MIIC8DCCAdigAwIBAgIQLSFOP5vm+ZpGHIScRa9MhjANBgkqhkiG9w0BAQsFADA0MTIwMAYDVQQDEylNaWNyb3NvZnQgQXp1cmUgRmVkZXJhdGVkIFNTTyBDZXJ0aWZpY2F0ZTAeFw0yNDA2MDMwNzU5NTlaFw0yNzA2MDMwNzU5NTlaMDQxMjAwBgNVBAMTKU1pY3Jvc29mdCBBenVyZSBGZWRlcmF0ZWQgU1NPIENlcnRpZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqFnlrOlSmN082GfiPVKVhTqs9/6ff92l/Wlw+eJPXunTx8dCPKTjWQjDqaC7XEm7SeUX0sKu4a7ZAu7xdtlgwaGFeI/kowIcrl1J1O43PieIfCH6HUeT4njC0sTxzLlWfEvXkRvlNVC+OLAmTuTN7FXCk5HDccceAulnkxYHvGu9a3h3N9fuVlKCjgocC1//LtjukEKaE48WxnhXp1FJDaTtF/9HfPnGUzrR5BNBhaaMzy2WX2dJXuZkaPQs7LfzAti9Dy8z/IR4SGJSI5cgcKXSQuIbZmNQMoEwYpz8R76Ivs6TC6AtNlfv1jWZTYDz8bb+bKuFNRg9xNpdq2gutQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQAcdTkDEufbBFRCfxJDshFmZoz0h1FLwd3TcZ/FFp7eR6reAn3oULIuojBpO0XlKcrF9bluR1Hp4RjB+a65P9utLY88sAIG1kCncuxR753T8p7U7XhDgQ85qspkjmZzv1nb21XdbpLF4t7AZ3WbNJTivD2OzV/qQlsNm4Bj8OVs5IHiZ73iM4YTriDSv7vwd9LHhn/0/NYYRX+vFQhg0BUhf2egYrMiDnSeniuwwbeTI0DI+0vxTFY+XlvpgEjIal79pex0Mfzx7lOXUjjH+5ixeK7AUDSo+7IJ7m0dQjueJ6C4K1LTywvHUGHCIhbUes/+nPjRVxt4mNVRFqHrOQGV"
+          },
+          "xmlns": "http://www.w3.org/2000/09/xmldsig#"
+        },
+        "use": "signing"
+      },
+      "SingleLogoutService": {
+        "Binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect",
+        "Location": "https://login.microsoftonline.com/3d355765-67d9-47cd-9c7a-bf31179f56eb/saml2"
+      },
+      "SingleSignOnService": [
+        {
+          "Binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect",
+          "Location": "https://login.microsoftonline.com/3d355765-67d9-47cd-9c7a-bf31179f56eb/saml2"
+        },
+        {
+          "Binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST",
+          "Location": "https://login.microsoftonline.com/3d355765-67d9-47cd-9c7a-bf31179f56eb/saml2"
+        }
+      ],
+      "protocolSupportEnumeration": "urn:oasis:names:tc:SAML:2.0:protocol"
+    },
+    "xmlns": "urn:oasis:names:tc:SAML:2.0:metadata",
+    "ID": "a2c45126-ccd6-48b3-935c-71f0fb74b70f",
+    "entityID": "https://sts.windows.net/3d355765-67d9-47cd-9c7a-bf31179f56eb/"
+  }
+}
