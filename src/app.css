@@ -1,6 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+    --color-primary: rgb(0, 123, 255);
+    --color-primarybg-text: 'rgb(255,255,255)';
+    --color-bodybg: rgb(238, 238, 238);
+    --color-secondary: rgb(221, 221, 221);
+    --color-secondarybg-text: rgb(0, 0, 0);
+    --color-secondarybg-link: rgb(0, 123, 255);
+
+
+    --color-primary-hover: color-mix(in srgb, var(--color-primary) 90%, black 45%);
+    --color-primary-accent: color-mix(in srgb, var(--color-primary) 90%, black 10%);
+
+    --width-8xl: 88rem;
+    --width-9xl: 96rem;
+}
+
 html, body {
     @apply w-full h-full m-0 p-0;
 }
@@ -16,15 +31,25 @@ svg:focus {
     outline: none;
 }
 
+a {
+    @apply text-primary;
+
+    &:hover {
+        color: var(--color-primary-hover)
+    }
+}
 
 .bg-secondary a {
-    color: var(--color-secondarybg-link);
+    @apply text-secondarybg-link;
+
+    &:hover {
+        color: color-mix(in srgb, var(--color-secondarybg-link) 75%, black);
+    }
 }
 
 .bg-primary {
     &.mdc-button--raised {
-        background-color: var(--color-primary);
-        color: var(--color-primarybg-text);
+        @apply bg-primary text-primarybg-text;
 
         &:disabled {
             @apply bg-gray-200 text-gray-500 cursor-not-allowed;
@@ -33,10 +58,14 @@ svg:focus {
 }
 
 
- .cardColumns {
-     @apply columns-1 2xl:columns-2 gap-4;
+.cardColumns {
+    @apply columns-1 2xl:columns-2 gap-4;
+
     .card {
         @apply mb-4;
     }
- }
+}
 
+.container {
+    @apply max-w-[90%] lg:max-w-3xl xl:max-w-7xl 2xl:max-w-9xl mx-auto;
+}

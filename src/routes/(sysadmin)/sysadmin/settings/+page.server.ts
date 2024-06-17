@@ -2,6 +2,8 @@ import type { Actions } from './$types';
 import GenericSettings from "$lib/server/GenericSettings";
 import Auditlog, {AuditlogTypes} from "$lib/server/Database/Entities/Auditlog.db";
 import User from "$lib/server/Database/Entities/User.db";
+import {error} from "@sveltejs/kit";
+import {forbidden} from "$lib/server/HTTPErrors";
 
 
 async function updateWebsite(formData: FormData, user: User) : Promise<{error:string|null}> {
@@ -37,9 +39,15 @@ async function updateWebsite(formData: FormData, user: User) : Promise<{error:st
 
 export const actions = {
     default: async function({request, locals}) : Promise<{error:string|null, action: string}> {
-        let user = locals.user ?? (await User.findOneBy({id: '00000000-0000-0000-0000-000000000000'})) as User;
         const formData = await request.formData();
         const action = formData.get('action') as string ?? '';
+
+        if(!locals.isSysadmin()) {
+           forbidden();
+        }
+
+        let user = locals.user ?? (await User.findOneBy({id: '00000000-0000-0000-0000-000000000000'})) as User;
+
 
         if (action === 'updateWebsite') {
             return {action, ...await updateWebsite(formData, user)};

@@ -27,29 +27,26 @@
         'danger': Error,
         'success': Check_circle
     }
-</script>
-<style>
-    .banner {
-        @apply p-2 rounded-lg border my-2;
-        &.notice, &.warning {
-            @apply bg-amber-100 text-amber-600 border-amber-600;
-        }
 
-        &.error, &.danger {
-            @apply bg-red-200 text-red-800 border-red-600;
-        }
+    const statusColors = {
+        'notice': 'bg-amber-100 text-amber-600 border-amber-600',
+        'warning': 'bg-amber-100 text-amber-600 border-amber-600',
 
-        &.success {
-            @apply bg-green-200 text-green-800 border-green-600;
-        }
+        'error': 'bg-red-200 text-red-800 border-red-600',
+        'danger': 'bg-red-200 text-red-800 border-red-600',
+
+        'success': 'bg-green-200 text-green-800 border-green-600'
     }
-</style>
+
+
+</script>
+
 {#snippet snippetDefaultIcon()}<div class="mr-2">
 <svelte:component this={defaultIcons[status]} />
 </div>
 {/snippet}
 
-<div class="{status} banner flex {_restProps['class'] ?? ''}" in:fade>
+<div class="{statusColors[status]??''} p-2 my-2 border rounded-lg banner flex {_restProps['class'] ?? ''}" in:fade>
     {#if withIcon}
         {@render snippetIcon()}
     {/if}

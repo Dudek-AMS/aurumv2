@@ -1,8 +1,9 @@
-import { building } from '$app/environment';
+import {building} from '$app/environment';
 import Design from "$lib/server/Database/Entities/Design.db";
+import {addStartup} from "$lib/Startup";
 
 
-class DesignWrapper implements Iterable<Design>{
+class DesignWrapper implements Iterable<Design> {
     private designMap: Map<string, Design> = new Map();
 
     async refresh() {
@@ -26,16 +27,17 @@ class DesignWrapper implements Iterable<Design>{
         return Array.from(this.designMap.values());
     }
 
-    get(key: string): null|Partial<Design> {
+    get(key: string): null | Partial<Design> {
         return this.designMap.get(key)?.toJSON() ?? null;
     }
-    private _get(key: string): null|Design {
+
+    private _get(key: string): null | Design {
         return this.designMap.get(key) ?? null;
     }
 
     async set(key: string, value: string) {
         let design = this._get(key);
-        if(design === null) {
+        if (design === null) {
             design = new Design();
             design.key = key;
             design.value = value;
@@ -53,7 +55,7 @@ class DesignWrapper implements Iterable<Design>{
         let data = this.values();
         let index = 0;
         return {
-            next: () => ({ value: data[++index], done: !(index in data) })
+            next: () => ({value: data[++index], done: !(index in data)})
         };
     }
 
@@ -63,24 +65,24 @@ class DesignWrapper implements Iterable<Design>{
 
 const _design = new DesignWrapper();
 
-if(!building) {
-    await _design.refresh();
+addStartup(async function () {
+        await _design.refresh();
 
-    const DefaultColors = [
-        ['--color-primary', '#007bff'],
-        ['--color-primarybg-text', '#FFFFFF'],
-        ['--color-bodybg', '#EEEEEE'],
-        ['--color-secondary', '#DDDDDD'],
-        ['--color-secondarybg-text', '#000000'],
-        ['--color-secondarybg-link', '#007bff'],
-    ]
+        const DefaultColors = [
+            ['--color-primary', 'rgb(0,123,255)'],
+            ['--color-primarybg-text', 'rgb(255,255,255)'],
+            ['--color-bodybg', 'rgb(238,238,238)'],
+            ['--color-secondary', 'rgb(221,221,221)'],
+            ['--color-secondarybg-text', 'rgb(0,0,0)'],
+            ['--color-secondarybg-link', 'rgb(0,123,255)'],
+        ]
 
-    DefaultColors.forEach(([key, value]) => {
-        if (_design.get(key) === null) {
-            _design.set(key, value);
-        }
-    });
-}
+        DefaultColors.forEach(([key, value]) => {
+            if (_design.get(key) === null) {
+                _design.set(key, value);
+            }
+        });
+});
 
 
 export default _design;

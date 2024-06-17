@@ -20,7 +20,7 @@
 </script>
 
 {#if form && form.error}
-    <Banner status="error">
+    <Banner status="error" class="my-4">
         <p>{form.error}</p>
     </Banner>
 {/if}

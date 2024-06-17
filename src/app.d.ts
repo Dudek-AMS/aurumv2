@@ -10,6 +10,7 @@ declare global {
 			session: Session,
 			user?: User,
 			ip: string,
+			isSysadmin: () => boolean
 		}
 		// interface PageData {}
 		// interface PageState {}

@@ -5,7 +5,7 @@ import {
     Entity,
     ManyToOne,
     PrimaryColumn,
-    PrimaryGeneratedColumn,
+    PrimaryGeneratedColumn, RelationId,
     Unique
 } from "typeorm"
 import User from "$lib/server/Database/Entities/User.db";
@@ -28,6 +28,9 @@ export default class Auditlog extends BaseEntity {
 
     @ManyToOne(() => User, user => user.logs)
     user: User;
+
+    @RelationId((log: Auditlog) => log.user)
+    userId: string;
 
     @Column("enum", {enum: AuditlogTypes, default: AuditlogTypes.UNKNOWN, nullable: true})
     type: AuditlogTypes;

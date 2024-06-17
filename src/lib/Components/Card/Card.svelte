@@ -26,7 +26,7 @@
 
 
 
-<div class="bg-white card rounded-lg border shadow-2xl rounded-lg overflow-hidden {class$}" >
+<div class="bg-white card rounded-lg ring ring-primary/60 shadow-2xl rounded-lg overflow-hidden {class$}" >
 
     {#if snippetHeader}
         <div class="bg-primary p-4 text-primarybg-text">

@@ -5,7 +5,7 @@ export const load: LayoutServerLoad = async ({locals, request, parent}) => {
     if(url.pathname === '/sysadmin/login') {
         return {};
     }
-    if(!locals.session.sysadmin) {
+    if(!locals.isSysadmin()) {
         redirect(303, '/sysadmin/login');
     }
 

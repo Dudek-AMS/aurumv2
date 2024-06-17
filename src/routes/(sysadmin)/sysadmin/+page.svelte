@@ -9,7 +9,7 @@
 
 
 
-<div class="flex flex-row flex-wrap w-full gap-4 ">
+<div class="flex flex-row flex-wrap w-max m-auto gap-4 ">
 
     <Card class$="w-56">
         {#snippet snippetHeader()}

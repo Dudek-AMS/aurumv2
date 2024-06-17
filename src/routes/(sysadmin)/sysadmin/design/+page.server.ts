@@ -1,6 +1,10 @@
 import Design from "$lib/server/Design";
+import {forbidden} from "$lib/server/HTTPErrors";
 export const actions = {
     default: async ({request, locals})=> {
+        if(!locals.isSysadmin()) {
+            forbidden();
+        }
         const formData = await request.formData();
 
         const action = formData.get('action');
