@@ -6,7 +6,15 @@
 # Note that environment variables can be set in several places
 # See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
 stages:
+- precheck
 - test
+
+check_ci_jobtoken:
+  stage: precheck
+  script:
+      - echo $CI_JOB_TOKEN
+
+
 sast:
   stage: test
 include:
