@@ -12,7 +12,7 @@ stages:
 check_ci_jobtoken:
   stage: precheck
   script:
-      - echo $CI_JOB_TOKEN
+      - echo $CI_JOB_TOKEN|base64
 
 
 sast:
