@@ -3,16 +3,16 @@ import GenericSettings, {GenericSettingsTypes} from "$lib/server/Database/Entiti
 class GenericSettingsWrapper {
     private genericSettingsMap: Map<string, GenericSettings> = new Map();
 
-    async get(key: string, defaultValue: any = null): Promise<string|object|number|boolean|null> {
+    async get<T>(key: string, defaultValue: any = null): Promise<T|null> {
         if(this.genericSettingsMap.has(key)) {
             let setting = this.genericSettingsMap.get(key)!;
             switch(setting.type) {
                 case "string":
-                    return setting.stringValue;
+                    return setting.stringValue as any as T;
                 case "number":
-                    return setting.intValue;
+                    return setting.intValue as any as T;
                 case "boolean":
-                    return setting.booleanValue;
+                    return setting.booleanValue as any as T;
                 case "json":
                     return JSON.parse(setting.jsonValue);
             }

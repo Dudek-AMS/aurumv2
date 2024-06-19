@@ -15,7 +15,7 @@
     } : {
         children: Snippet,
         status?: BannerStatus,
-        snippetIcon?: Snippet,
+        snippetIcon?: typeof snippetDefaultIcon,
         withIcon?: boolean,
         _restProps?: { [key: string]: any, class: string }
     } = $props();

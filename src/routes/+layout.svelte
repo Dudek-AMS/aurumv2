@@ -26,6 +26,6 @@
     setContext('iconCtx', iconCtx);
 
 </script>
-<div style="{parseCSSVariables()}" id="layoutWrapper" class="bg-bodybg w-full h-full pt-2">
+<div style="{parseCSSVariables()}" id="layoutWrapper" class="bg-bodybg w-full h-full">
     {@render children()}
 </div>

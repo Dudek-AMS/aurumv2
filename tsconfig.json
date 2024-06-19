@@ -1,5 +1,6 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
+	"exclude": ["node_modules", ".svelte-kit", "build"],
 	"compilerOptions": {
 		"allowJs": true,
 		"checkJs": true,
@@ -12,7 +13,7 @@
 		"moduleResolution": "bundler",
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"strictPropertyInitialization": false,
+		"strictPropertyInitialization": false
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	// except $lib which is handled by https://kit.svelte.dev/docs/configuration#files

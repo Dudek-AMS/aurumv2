@@ -43,4 +43,16 @@ export default class User extends BaseEntity {
         }) as User;
     }
 
+    toJSON() {
+        return {
+            id: this.id,
+            userName: this.userName,
+            givenName: this.givenName,
+            familyName: this.familyName,
+            displayName: this.displayName,
+            active: this.active,
+            entraId: this.entraId,
+        }
+    }
+
 }

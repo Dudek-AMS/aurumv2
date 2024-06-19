@@ -1,6 +1,5 @@
 <script lang="ts">
 import TextField from "@smui/textfield";
-import type {Snippet} from "svelte";
 import ColorPicker from "svelte-awesome-color-picker";
 import {ClickOutside} from "$lib/Components/ClickOutside"
 import Restore from "svelte-google-materialdesign-icons/Restore.svelte";
@@ -8,13 +7,13 @@ let {
     value = $bindable(),
     label,
     pickerOpen = $bindable(false),
-    snippetPreview = snippetPreviewDefault as Snippet,
+    snippetPreview = snippetPreviewDefault,
     resetValue = $bindable(structuredClone(value)),
     name = undefined
     } : {
     value: string,
     label: string,
-    snippetPreview?: Snippet,
+    snippetPreview?: typeof snippetPreviewDefault
     pickerOpen?: boolean,
     resetValue?: string
     name?: string

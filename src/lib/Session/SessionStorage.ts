@@ -31,6 +31,7 @@ export function createOrGet(sessionId: string) : Session {
         session = {
             sessionId: sessionId,
             lastUpdated: new Date(),
+            sysadmin: false,
             data: {
                 userid: null
             }

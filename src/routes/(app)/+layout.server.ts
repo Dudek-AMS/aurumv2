@@ -4,5 +4,10 @@ export const load: LayoutServerLoad = ({locals}) => {
     if(!locals.user) {
         redirect(307, '/login');
     }
-    return {};
+
+    let user = locals.user.toJSON();
+
+    return {
+        user
+    };
 };
