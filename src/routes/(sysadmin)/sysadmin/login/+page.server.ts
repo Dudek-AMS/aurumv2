@@ -1,9 +1,13 @@
 import type { Actions } from './$types';
+import crypto from "node:crypto";
 import Sysadmin from "$lib/Sysadmin";
 import Auditlog, {AuditlogTypes} from "$lib/server/Database/Entities/Auditlog.db";
 import User from "$lib/server/Database/Entities/User.db";
+
+
+
 export const actions = {
-    default: async({request, locals}) : Promise<{error:string|null}> => {
+    default: async({request, locals}) : Promise<{error:string}> => {
         const formData = await request.formData();
         let password = formData.get('sysPassword');
         if(Sysadmin.sysAdminPasswordValidUntil < new Date()) {
@@ -12,7 +16,10 @@ export const actions = {
                 error: 'The SysAdmin password has expired, please try again.'
             };
         }
-        if(password === Sysadmin.sysAdminPassword) {
+        if(crypto.timingSafeEqual(
+            Buffer.from(password, 'utf-8'),
+            Buffer.from(Sysadmin.sysAdminPassword, 'utf-8')
+        )) {
             locals.session.sysadmin = true;
 
             const succeededLoginAuditLog = new Auditlog();
