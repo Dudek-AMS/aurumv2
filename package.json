@@ -12,19 +12,21 @@
     "smui-theme-dark": "smui-theme compile static/smui-dark.css -i src/theme/dark"
   },
   "devDependencies": {
-    "@smui-extra/autocomplete": "^7.0.0",
     "@smui/button": "^8.0.0-alpha.0",
+    "@smui/list": "^8.0.0-alpha.0",
+    "@smui/menu": "^8.0.0-alpha.0",
+    "@smui/menu-surface": "^8.0.0-alpha.0",
     "@smui/textfield": "^8.0.0-alpha.0",
     "@sveltejs/adapter-node": "^5.2.0",
     "@sveltejs/kit": "^2.5.17",
     "@sveltejs/vite-plugin-svelte": "^4.0.0-next.3",
     "@tailwindcss/vite": "^4.0.0-alpha.16",
-    "@types/node": "^20.14.5",
+    "@types/node": "^20.14.6",
     "@types/saml2-js": "^3.0.4",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "smui-theme": "^7.0.0",
-    "svelte": "^5.0.0-next.158",
+    "svelte": "^5.0.0-next.160",
     "svelte-awesome-color-picker": "^3.1.0",
     "svelte-check": "^3.8.1",
     "svelte-google-materialdesign-icons": "^1.0.3",
@@ -40,6 +42,7 @@
     "svelte-preprocess"
   ],
   "dependencies": {
+    "openpgp": "^5.11.2",
     "pg": "^8.12.0",
     "saml2-js": "^4.0.2",
     "typeorm": "^0.3.20"
