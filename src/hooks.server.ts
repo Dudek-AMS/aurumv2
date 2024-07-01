@@ -7,6 +7,7 @@ console.log('AurumV2 running in ' + (import.meta.env.DEV ? 'DEV' : 'PROD'));
 //we init the db connection
 import {TypeORM} from "$lib/server/Database/db";
 import {addStartup, runStartup} from "$lib/Startup";
+import {LDAPDirectory} from "$lib/server/plugins/ldap-directory/LDAPDirectory";
 await TypeORM.getInstance();
 
 
@@ -32,8 +33,6 @@ export const handle: Handle = async ({ event, resolve }) => {
         }
     }
     event.locals.isSysadmin =() => event.locals.session.sysadmin;
-
-
     try {
         event.locals.ip = event.getClientAddress();
     }   catch (e) {
@@ -43,6 +42,9 @@ export const handle: Handle = async ({ event, resolve }) => {
     const response = await resolve(event);
 
     set(event.locals.session);
+
+
+
     return response;
 }
 

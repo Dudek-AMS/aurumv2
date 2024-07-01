@@ -1,8 +1,20 @@
 name: aurum_devdocker
 services:
+  app_init: #we use this container to fix the permissions of the app volume to make it usable for local user
+    image: node:22.3-bookworm
+    volumes:
+      - ../:/home/node/app
+      - ./data/var/aurum/gpg:/var/aurum/gpg
+    entrypoint:
+      - sh
+      - -c
+      - |
+        chown -R ${UID}:${GID} /var/aurum/gpg
   app:
     restart: always
     depends_on:
+      app_init:
+        condition: service_completed_successfully
       database:
         condition: service_healthy
     user: ${UID}:${GID}
@@ -19,6 +31,8 @@ services:
     command: npm run dev
     volumes:
       - ../:/home/node/app
+      - ./data/var/aurum/gpg:/var/aurum/gpg
+
   database_init: #we use this container to fix the permissions of the database volume to make it usable for local user
     image: postgres:16.3-bookworm
     volumes:

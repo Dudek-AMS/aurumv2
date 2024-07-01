@@ -86,7 +86,7 @@ export class EntraClient {
         let [tenantId, clientId, clientSecret] = await Promise.all([
             GenericSettings.get<string>("entraApi.tenantId"),
             GenericSettings.get<string>("entraApi.clientId"),
-            GenericSettings.get<string>("entraApi.clientSecret")
+            GenericSettings.getSecuredString("entraApi.clientSecret")
         ]);
         this.tenantId = tenantId;
         this.clientId = clientId;

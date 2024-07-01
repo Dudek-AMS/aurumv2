@@ -1,4 +1,12 @@
 import GenericSettings, {GenericSettingsTypes} from "$lib/server/Database/Entities/GenericSettings.db";
+import PGPLoader   from "./PGPLoader";
+//check pgploader.ts
+let testEncrypted = await PGPLoader.encryptString("test");
+let testDecrypted = await PGPLoader.decryptString(testEncrypted);
+if(testDecrypted !== "test") {
+    throw new Error("PGP encryption test failed");
+}
+
 
 class GenericSettingsWrapper {
     private genericSettingsMap: Map<string, GenericSettings> = new Map();
@@ -27,7 +35,26 @@ class GenericSettingsWrapper {
         return this.get(key);
     }
 
-    async set(key: string, value: string|object|number|boolean) {
+    async getSecuredString(key: string): Promise<string> {
+        let setting = await this.get<string>(key);
+        if(setting === null) {
+            return null;
+        }
+        if(!setting.includes("-----BEGIN PGP MESSAGE-----")) {
+            await this.setSecuredString(key, setting);
+            return setting;
+        }
+        let decrypted = await PGPLoader.decryptString(setting);
+        this.genericSettingsMap.set(key, decrypted);
+        return decrypted;
+    }
+
+    async setSecuredString(key: string, value: string) {
+        let encrypted = await PGPLoader.encryptString(value);
+        await this.set(key, encrypted);
+    }
+
+    async set(key: string, value: any) {
         let setting = this.genericSettingsMap.get(key);
         if(setting === undefined) {
             setting = new GenericSettings();

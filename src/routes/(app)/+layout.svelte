@@ -38,7 +38,7 @@
 
 
     <header id="header" class="fixed h-16 w-full z-30 bg-primary border-b text-primarybg-text border-primary-hover shadow-xl top-0">
-        <div class="flex w-full justify-end items-center">
+        <div class="flex w-full justify-end items-center h-full">
             <div id="headerSearch" >
                 <TextField input$name="search" class="m-2 bg-primary-hover text-primarybg-text lg:w-96 h-10!" variant="outlined"  bind:value={searchValue}>
 
@@ -52,7 +52,7 @@
             <div id="profileBall" class="mx-4 flex">
 
 
-                <button type="button" onclick={(e) => {
+                <button type="button" onclick={() => {
                 profileBallMenu?.setOpen(true)}
                 } class="cursor-pointer h-12 aspect-square rounded-full ">
                     <img src="/user/{data.user.entraId}/photo" class="rounded-full border-2 border-primarybg-text hover:border-primary-hover" alt="Profilbild" />

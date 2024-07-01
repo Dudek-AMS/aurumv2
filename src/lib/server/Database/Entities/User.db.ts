@@ -50,8 +50,7 @@ export default class User extends BaseEntity {
             givenName: this.givenName,
             familyName: this.familyName,
             displayName: this.displayName,
-            active: this.active,
-            entraId: this.entraId,
+            active: this.active
         }
     }
 
